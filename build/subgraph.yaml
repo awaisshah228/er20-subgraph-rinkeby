@@ -1,6 +1,6 @@
 specVersion: 0.0.4
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: Test
@@ -8,7 +8,7 @@ dataSources:
     source:
       address: "0xB865EA040580d8DDEa0Cc694a67D78685b081b36"
       abi: Test
-      startBlock: 10981586 
+      startBlock: 10981586
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -20,10 +20,10 @@ dataSources:
         - TokenBalance
       abis:
         - name: Test
-          file: ./abis/Test.json
+          file: Test\abis\Test.json
       eventHandlers:
         - event: Approval(indexed address,indexed address,uint256)
           handler: handleApproval
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
-      file: ./src/test.ts
+      file: Test\Test.wasm
